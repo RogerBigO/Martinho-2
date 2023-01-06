@@ -1,0 +1,48 @@
+Module Program
+    Public num1 As Integer
+    Public num2 As Integer
+    Public operacao As Integer
+    Public adicao As Integer
+    Public subtracao As Integer
+    Public divisao As Integer
+    Public multiplicacao As Integer
+
+    Sub Main(args As String())
+        Console.WriteLine("Calculadora de Console\r")
+        Console.WriteLine("---------------\n")
+        Console.writeLine("Digite um numero e pressione enter ")
+        num1 = Console.ReadLine()
+
+        Console.WriteLine("Digite outro numero e presione enter")
+        num2 = Console.ReadLine()
+
+        Console.WriteLine("Quak operacao voce quer fazer?")
+        Console.WriteLine("\t1 - Adicao")
+        Console.WriteLine("\t2 - Subtracao")
+        Console.WriteLine("\t3 - Multiplicacao")
+        Console.WriteLine("\t4 - Divisao")
+
+        adicao = num1 + num2
+        subtracao = num1 - num2
+        multiplicacao = (num1 x num2)
+        divisao = num1 / num2
+
+        operacao = Console.ReadLine()
+
+        Select Case operacao
+            Case 1
+                Console.WriteLine($"Seu resultado: {num1} + {num2} = " & adicao) 
+            Case 2
+                Console.WriteLine($"Seu resultado: {num1} - {num2} = " & subtracao)
+            Case 3
+                Console.WriteLine($"Seu resultado: {num1} x {num2} = " & multplicacao)
+            Case 1
+                Console.WriteLine($"Seu resultado: {num1} / {num2} = " & divisao)
+            Case Else
+                Console.Write("Opcao invalida!")
+        End Select
+
+        Console.Write("Pressione qualquer tecla para fechar a aplicacao...")
+        Console.ReadKey(True)
+    End Sub
+End Module
